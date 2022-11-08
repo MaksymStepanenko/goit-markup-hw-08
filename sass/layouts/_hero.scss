@@ -1,0 +1,86 @@
+.hero {
+  background: var(--footer-bg-color);
+  // padding: 200px 0;
+  padding: 118px 0;
+  text-align: center;
+  @media screen and (max-width: 767px) {
+     background-image: var(--primary-bg-gradient), url(../images/hero-bg-mob.jpg);
+  @include retina {
+    background-image: var(--primary-bg-gradient),
+      url(../images/hero-bg-mob-2x.jpg);
+   }
+  }
+ 
+  @media screen and (min-width: 768px) {
+    background-image: var(--primary-bg-gradient), url(../images/hero-bg-tab.jpg);
+    @include retina {
+      background-image: var(--primary-bg-gradient),
+        url(../images/hero-bg-tab-2x.jpg);
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    background-image: var(--primary-bg-gradient), url(../images/hero-bg.jpg);
+
+    @include retina {
+      background-image: var(--primary-bg-gradient),
+        url(../images/hero-bg-2x.jpg);
+    }
+  }
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  margin: 0 auto;
+  @media screen and (min-width: 1200px) {
+    padding: 200px 0;
+  }
+}
+
+.hero__title {
+  margin: 0 auto;
+  display: block;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.61;
+  max-width: 380px;
+  width: 100%;
+  @media screen and (max-width: 419px) {
+    font-size: 22px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    min-width: 696px;
+  }
+  // font-weight: 900;
+  // font-size: 44px;
+  // line-height: 1.36;
+  // letter-spacing: 0.06em;
+  // width: 696px;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+}
+
+.hero__button {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--primary-white-color);
+  background-color: var(--acent-color);
+  border-radius: 4px;
+  border: 1px solid var(--acent-color);
+  cursor: pointer;
+
+  padding: 10px 32px;
+  margin-top: 20px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: var(--secondary-acent-color);
+  }
+}
